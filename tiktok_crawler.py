@@ -1,12 +1,3 @@
-# -*- coding: utf-8 -*-
-# @Author : lihuiwen
-# @file : tiktok_crawler
-# @Email : huiwennear@163.com
-# @Time : 2024/5/23 16:59
-
-"""
-    Tiktok评论爬取
-"""
 from utils.common_utils import CommonUtils
 
 import requests
@@ -42,11 +33,11 @@ class TiktokComment:
             if (comments):
                 for comment_index in range(len(comments)):
                     comment_item = comments[comment_index]
-                    print(f"爬取成功：{comment_item.get('user').get('nickname')}：{comment_item.get('text')}")
+                    print(f"Success：{comment_item.get('user').get('nickname')}：{comment_item.get('text')}")
             else:
-                print(f"爬取结束：评论数={total}")
+                print(f"Success：Num of comment = {total}")
         else:
-            print(f"爬取失败或没有评论")
+            print(f"Fail")
 
 
 if __name__ == '__main__':
